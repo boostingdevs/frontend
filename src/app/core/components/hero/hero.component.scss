@@ -1,0 +1,93 @@
+@import '../../../../variables.scss';
+
+.main-section {
+  height: 550px;
+  background-image: url('../../../../assets/images/square-pattern.png');
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__subtitle, &__button {
+    width: 100%;
+  }
+
+  &__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 1000px;
+  }
+
+  &__title, &__subtitle {
+    text-align: center;
+    letter-spacing: .5px;
+  }
+
+  &__title {
+    margin: 15px auto 35px;
+    width: 80%;
+    color: $white;
+    font-size: 60px;
+
+  }
+
+  &__subtitle  {
+    color: $gray-300;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    & > button {
+      font-size: 16px;
+      margin: 0 10px;
+
+      & > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $white;
+
+        & > img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .main-section {
+    height: 450px;
+
+    &__container {
+      align-items: center;
+      width: 85%;
+      margin: 50px auto 0;
+    }
+
+    &__title {
+      width: 100%;
+      font-size: 26px;
+      margin: 5px 0 30px;
+    }
+
+    &__subtitle {
+      font-size: 11px;
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 170px;
+      gap: 10px;
+
+      & button {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+    }
+  }
+}

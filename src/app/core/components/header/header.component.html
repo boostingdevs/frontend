@@ -1,0 +1,45 @@
+<div class="header">
+    <div class="header__container container">
+        <div class="header__logo">
+            <img src="../../../assets/brand/logo.svg" alt="Boosting Devs Logo">
+
+        </div>
+        <div class="header__logo-mobile">
+          <img src="../../../assets/brand/logo-icon.svg" alt="Boosting Devs Logo">
+
+        </div>
+        <div class="header__search-bar">
+            <div class="header__search-bar-container">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2093 4.8545C12.1471 2.28767 9.65845 0.612748 6.89566 0.605321C3.91804 0.589541 1.27041 2.50905 0.342223 5.35651C-0.585962 8.20397 0.417334 11.3289 2.82559 13.0913C5.23385 14.8538 8.49692 14.8512 10.9024 13.0848L13.0472 15.2435C13.2653 15.4627 13.6186 15.4627 13.8366 15.2435C14.0545 15.024 14.0545 14.6684 13.8366 14.449L11.7588 12.3578C13.6997 10.3789 14.2714 7.42134 13.2093 4.8545ZM12.2134 9.72619C11.3216 11.8891 9.22243 13.2977 6.89566 13.2947V13.2647C3.73774 13.2607 1.17415 10.694 1.1537 7.5159C1.15069 5.1742 2.55038 3.06153 4.69946 2.164C6.84854 1.26647 9.32327 1.76105 10.9685 3.41688C12.6138 5.07271 13.1052 7.56332 12.2134 9.72619Z" fill="white"/>
+                </svg>
+                <input type="text" placeholder="Procure por algo...">
+            </div>
+        </div>
+        <div class="header__desktop">
+          <nav class="header__menu">
+            <ul class="header__menu-item-group">
+                <li class="header__menu-item">
+                    <a href="/">Home</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/challenges">Challenges</a>
+                </li>
+                <li class="header__menu-item soon">
+                    <a href="/">Blog</a>
+                </li>
+                <li class="header__menu-item soon">
+                    <a href="/">Contribua</a>
+                </li>
+            </ul>
+          </nav>
+          <div class="header__button">
+              <button class="button" (click)="loginWithGitHub()">Login</button>
+          </div>
+        </div>
+
+        <div class="header__mobile" (click)="openMenuMobile()" >
+          <span  class="header__menu-hamburguer"></span>
+        </div>
+    </div>
+</div>

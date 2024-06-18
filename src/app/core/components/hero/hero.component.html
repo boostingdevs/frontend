@@ -1,0 +1,15 @@
+<section class="main-section">
+  <div class="main-section__container container">
+      <p class="main-section__subtitle" >{{ textP }}</p>
+      <h2 class="main-section__title">{{ textH1 }}<strong style="color: #60F366;">{{ textH1Color }}</strong></h2>
+      <div class="main-section__button">
+          <button class="button"  *ngIf="startProjectButton" (click)="navigateToChallenges()">Começar um projeto</button>
+          <button class="button --dark">
+            <a [href]="DISCORD_INVITATION">
+              <img  src="../../../assets/icons/social-media/discord.svg" alt="Python Logo">
+              Comunidade
+            </a>
+          </button>
+      </div>
+  </div>
+</section>

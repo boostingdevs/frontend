@@ -1,0 +1,103 @@
+@import '../../../../../variables.scss';
+
+.newsletter {
+    margin: 0 100px;
+    display: flex;
+    justify-content: center;
+
+    z-index: 2;
+    position: relative;
+    color: $gray-500;
+
+    &__text {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    &__container {
+        max-width: 1000px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(13, 13, 13, 0.9);
+        padding: 25px;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+
+        .newsletter__input {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+
+          width: 420px;
+          height: 44px;
+          background-color: $gray-900;
+
+          border: 2px solid $gray-700;
+          border-radius: 5px;
+
+          input {
+            background-color: $gray-900;
+            border: none;
+            width: 100%;
+            color: $white;
+            outline: none;
+            text-indent: 10px;
+          }
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: $gray-700;
+            color: $white;
+            width: 70%;
+            height: 100%;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 11px 30px;
+            border: none;
+
+            transition: .35s ease;
+            cursor: pointer;
+
+            &:hover{
+              color: $gray-900;
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      .newsletter {
+        margin: 70px 20px 0px;
+
+        &__container {
+          flex-direction: column;
+        }
+
+        &__text {
+          width: 100%;
+          font-size: 12px;
+        }
+
+        .newsletter__input {
+          width: 100%;
+
+          input {
+            font-size: 12px;
+          }
+
+          button {
+            font-size: 12px;
+            padding: 9px 15px;
+          }
+        }
+      }
+    }

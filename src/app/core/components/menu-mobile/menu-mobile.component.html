@@ -1,0 +1,26 @@
+<div class="menu-mobile" [ngClass]="{'opened': menuMobileService.opened} ">
+  <button class="menu-mobile__close-button" (click)="menuMobileService.openMenuMobile()">
+    <span class="menu-mobile__close-icon"></span>
+  </button>
+
+  <nav class="menu-mobile__menu">
+    <ul class="menu-mobile__menu-item-group">
+        <li class="menu-mobile__menu-item">
+            <a href="/">Home</a>
+        </li>
+        <li class="menu-mobile__menu-item">
+            <a href="/challenges">Challenges</a>
+        </li>
+        <li class="menu-mobile__menu-item">
+            <a href="/">Blog</a>
+        </li>
+        <li class="menu-mobile__menu-item">
+            <a href="/">Contribua</a>
+        </li>
+    </ul>
+  </nav>
+
+  <div class="menu-mobile__button">
+    <button class="button" (click)="loginWithGitHub()">Login</button>
+  </div>
+</div>

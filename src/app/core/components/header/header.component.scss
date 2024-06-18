@@ -1,0 +1,223 @@
+@import '../../../../variables.scss';
+
+.header {
+    color: $white;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.05);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__container {
+      margin: 0 auto;
+      width: 85%;
+      justify-content: space-between;
+    }
+
+    &__desktop {
+      display: none;
+      width: 100%;
+    }
+
+    &__mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0 10px;
+
+      &:hover > .header__menu-hamburguer {
+        background: $green-border;
+
+        &::after, &::before {
+          background: $green-border;
+        }
+      }
+    }
+
+    &__logo {
+        display: none;
+        align-items: center;
+        margin-right: 40px;
+        width: 375px;
+
+        &-mobile {
+          width: fit-content;
+          display: flex;
+          width: 30px;
+        }
+    }
+
+    &__menu-hamburguer {
+      width: 25px;
+      height: 2px;
+      background: $white;
+      position: relative;
+      transition: .35s ease;
+      border-radius: 25px;
+
+
+      &::after, &::before {
+        transition: .35s ease;
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: $white;
+        top: 0;
+        left: 0;
+        border-radius: 25px;
+
+        &:hover {
+          background: $green-border;
+        }
+      }
+
+      &::after {
+        transform: translateY(8px);
+      }
+
+      &::before {
+        transform: translateY(-8px);
+      }
+    }
+
+    &__search-bar {
+        display: flex;
+        align-items: center;
+
+        &-container {
+            width: 200px;
+            background-color: $gray-700;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+
+            & > svg {
+                width: 10%;
+                padding-right: 5px;
+            }
+
+            & > input {
+                width: 85%;
+                background: none;
+                border: none;
+                color: $white;
+                outline: none;
+                font-size: 14px;
+
+                &::placeholder {
+                    color: $white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &__button {
+        display: none;
+        align-items: center;
+        margin-left: 40px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+
+        &-item {
+            margin: 0 20px;
+            font-weight: bold;
+            letter-spacing: .5px;
+            font-size: 14px;
+
+            &.soon {
+              position: relative;
+              & > a {
+                pointer-events: none;
+                color: $gray-700;
+              }
+
+              &:hover::after {
+                opacity: 1;
+              }
+              
+              &::after {
+                opacity: 0;
+                transition: .35s ease;
+                position: absolute;
+                background-color: $green;
+                top: -10px;
+                left: 65%;
+                content: "em breve";
+                white-space: nowrap;
+                color: $gray-900;
+                padding: 2px 6px;
+                border-radius: 50px;
+                font-size: 12px;
+                z-index: 2;
+              }
+            }
+
+            & > a, & > a:hover {
+                color: $white;
+                text-decoration: none;
+                transition: .35s ease;
+            }
+
+            & > a:hover {
+                filter: brightness(0.75);
+            }
+
+            &-group {
+                display: flex;
+
+                justify-content: center;
+            }
+        }
+    }
+
+    /** Media Queries **/
+    @media (min-width: $mobile) {
+      justify-content: center;
+
+      &__container {
+        width: initial;
+      }
+
+      &__search-bar {
+        margin-right: 40px;
+      }
+
+      &__logo {
+        display: flex;
+
+        &-mobile {
+          display: none;
+        }
+      }
+
+      &__desktop {
+        display: flex;
+      }
+
+      &__mobile {
+        display: none;
+      }
+
+      &__search-bar {
+        &-container {
+            width: 300px;
+        }
+      }
+    }
+}

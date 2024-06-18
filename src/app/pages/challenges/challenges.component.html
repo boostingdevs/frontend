@@ -1,0 +1,90 @@
+<main>
+  <app-hero [textP]="challengesP" [textH1]="challengesH1"/>
+
+  <section class="challenges-section">
+    <div class="challenges-section__container container">
+      <div class="challenges-mobile">
+        <div class="challenges-mobile__text">
+          <h1>Challenges</h1>
+          <p>Escolha seu desafio e comece um novo projeto.</p>
+        </div>
+        <div class="challenges-mobile__filter">
+          <button class="challenges-mobile__filter__button" id="btnMobile" (click)="mobile()">
+            <span class="challenges-mobile__filter__button__icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="challenges-section__filter-container">
+        <div class="challenges-section__filter">
+
+          <div class="challenges-section__mobile">
+            <button id="closeFilter" (click)="closeFilterMobile()">
+              <img src="../../../assets/brand/x.svg" alt="close filter" id="closeFilter">
+            </button>
+            <div class="challenges-section__mobile__search-barr">
+              <div class="challenges-section__mobile__search-barr-containerr">
+                  <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2093 4.8545C12.1471 2.28767 9.65845 0.612748 6.89566 0.605321C3.91804 0.589541 1.27041 2.50905 0.342223 5.35651C-0.585962 8.20397 0.417334 11.3289 2.82559 13.0913C5.23385 14.8538 8.49692 14.8512 10.9024 13.0848L13.0472 15.2435C13.2653 15.4627 13.6186 15.4627 13.8366 15.2435C14.0545 15.024 14.0545 14.6684 13.8366 14.449L11.7588 12.3578C13.6997 10.3789 14.2714 7.42134 13.2093 4.8545ZM12.2134 9.72619C11.3216 11.8891 9.22243 13.2977 6.89566 13.2947V13.2647C3.73774 13.2607 1.17415 10.694 1.1537 7.5159C1.15069 5.1742 2.55038 3.06153 4.69946 2.164C6.84854 1.26647 9.32327 1.76105 10.9685 3.41688C12.6138 5.07271 13.1052 7.56332 12.2134 9.72619Z" fill="white"/>
+                  </svg>
+                  <input type="text" placeholder="Procure por um desafio..." (input)="searchChallenge($event)">
+              </div>
+            </div>
+            <span>Limpar</span>
+          </div>
+          <div class="challenges-section__filter__search-bar">
+            <div class="challenges-section__filter__search-bar-container">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2093 4.8545C12.1471 2.28767 9.65845 0.612748 6.89566 0.605321C3.91804 0.589541 1.27041 2.50905 0.342223 5.35651C-0.585962 8.20397 0.417334 11.3289 2.82559 13.0913C5.23385 14.8538 8.49692 14.8512 10.9024 13.0848L13.0472 15.2435C13.2653 15.4627 13.6186 15.4627 13.8366 15.2435C14.0545 15.024 14.0545 14.6684 13.8366 14.449L11.7588 12.3578C13.6997 10.3789 14.2714 7.42134 13.2093 4.8545ZM12.2134 9.72619C11.3216 11.8891 9.22243 13.2977 6.89566 13.2947V13.2647C3.73774 13.2607 1.17415 10.694 1.1537 7.5159C1.15069 5.1742 2.55038 3.06153 4.69946 2.164C6.84854 1.26647 9.32327 1.76105 10.9685 3.41688C12.6138 5.07271 13.1052 7.56332 12.2134 9.72619Z" fill="white"/>
+                </svg>
+                <input type="text" placeholder="Procure por um desafio..." (input)="searchChallenge($event)">
+            </div>
+          </div>
+          <div class="challenges-section__filter-areas">
+            <h5 class="challenges-section__filter-areas-title">Areas</h5>
+
+            <div class="challenges-section__filter-areas-group">
+              @for (area of filterAreas; track area) {
+                <span class="challenges-section__filter-areas-item" (click)="filterChallengeByArea(area, $event)">{{ area }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="challenges-section__filter-categories">
+            <h5 class="challenges-section__filter-categories-title">Categorias</h5>
+
+            <div class="challenges-section__filter-categories-group">
+              @for (category of filterCategories; track category) {
+                <span class="challenges-section__filter-categories-item" (click)="filterChallengeByCategory(category, $event)">{{ category }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="challenges-section__group">
+        @for (challenge of challenges; track challenge) {
+            <div class="challenge" (click)="openChallengePage(challenge.id)">
+              <div class="challenge__image">
+                <div class="challenge__iframe">
+
+                </div>
+              </div>
+              <div class="challenge__informations">
+                <h5 class="challenge__title">{{ challenge.name }}</h5>
+                <p class="challenge__subtitle">{{ challenge.subtitle }}</p>
+
+                <div class="challenge__tags">
+                  @for (tag of challenge.tags; track tag) {
+                    <span class="challenge__tag">{{ tag }}</span>
+                  }
+                </div>
+
+                <p class="challenge__level">Nível: {{ challenge.level }}</p>
+              </div>
+            </div>
+          } @empty {
+            <li style="color: white;">Sem resultados.</li>
+         }
+      </div>
+    </div>
+  </section>
+</main>
