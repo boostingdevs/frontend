@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    API: 'https://backend-4rye.onrender.com'
+    API: 'https://seal-app-rpul5.ondigitalocean.app/'
   };
