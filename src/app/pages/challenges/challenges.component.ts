@@ -1,8 +1,9 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, inject } from '@angular/core';
 import { ChallengesService } from '../../core/services/challenges.service';
 import { Challenge } from '../../core/types/challenge/challenge.model';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/services/auth.service';
+import { ProgressBarService } from '../../core/services/progress-bar.service';
+
 
 @Component({
   selector: 'app-challenges',
@@ -10,6 +11,7 @@ import { AuthService } from '../../core/services/auth.service';
   styleUrl: './challenges.component.scss'
 })
 export class ChallengesComponent implements OnInit {
+  progressBarService = inject(ProgressBarService);
 
   public challengesP = "Ensinar é o melhor jeito de aprender.";
   public challengesH1 = "Aprenda colaborando com outras pessoas";
@@ -33,25 +35,23 @@ export class ChallengesComponent implements OnInit {
       }
     })}
 
-    /* Button close filter */
-    public closeFilterMobile(): any {
-      const closeFilter = document.getElementById('closeFilter') as HTMLButtonElement;
-      const divFilter = document.querySelector('.challenges-section__filter-container') as HTMLDivElement;
+  /* Button close filter */
+  public closeFilterMobile(): any {
+    const closeFilter = document.getElementById('closeFilter') as HTMLButtonElement;
+    const divFilter = document.querySelector('.challenges-section__filter-container') as HTMLDivElement;
 
-      closeFilter.addEventListener('click', ()=> {
-        if (divFilter.style.display = 'flex') {
-          divFilter.style.display = 'none'
-        }
-      })
-    }
+    closeFilter.addEventListener('click', ()=> {
+      if (divFilter.style.display = 'flex') {
+        divFilter.style.display = 'none'
+      }
+    })
+  }
 
 
   /**
    * Challenges Service DI
    */
   private challengesService = inject(ChallengesService)
-
-  private authService = inject(AuthService)
 
   /**
    * Router Service DI
@@ -131,7 +131,11 @@ export class ChallengesComponent implements OnInit {
   }
 
   public openChallengePage(id: number) {
+    this.progressBarService.progressBarState.next(true);
     this.router.navigate(['challenge', id])
+    .finally(() => {
+      this.progressBarService.progressBarState.next(false);
+    })
   }
 
   public searchChallenge(event: Event) {

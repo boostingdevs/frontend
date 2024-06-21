@@ -63,10 +63,8 @@
       <div class="challenges-section__group">
         @for (challenge of challenges; track challenge) {
             <div class="challenge" (click)="openChallengePage(challenge.id)">
-              <div class="challenge__image">
-                <div class="challenge__iframe">
-
-                </div>
+              <div class="challenge__figma">
+                <img class="challenge__figma-image" [ngSrc]="challenge.image" fill priority/>
               </div>
               <div class="challenge__informations">
                 <h5 class="challenge__title">{{ challenge.name }}</h5>

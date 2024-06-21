@@ -1,19 +1,23 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, inject } from '@angular/core';
 import { MenuMobileService } from '../menu-mobile/services/menu-mobile.service';
 import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
+import { ProgressBarService } from '../../services/progress-bar.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
   menuMobileService = inject(MenuMobileService);
-  authService = inject(AuthService)
+  authService = inject(AuthService);
+  progressBarService = inject(ProgressBarService);
 
-  ngOnInit(): void {
+  public progressBarState = false;
 
+  ngOnInit(): void {  
+    this.progressBarService.progressBarState.subscribe((value) => this.progressBarState = value);
   }
 
   loginWithGitHub(): void {

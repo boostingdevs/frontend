@@ -1,5 +1,7 @@
 @import '../../../variables.scss';
 
+
+
 .main-section {
   height: 550px;
   background-image: url('../../../assets/images/square-pattern.png');
@@ -187,16 +189,17 @@
       background: rgba(33, 33, 33, 0.5);
     }
 
-    &__image {
+    &__figma {
       height: 50%;
       padding-bottom: 10px;
-    }
+      margin-bottom: 10px;
+      position: relative;
 
-    &__iframe {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      background-color: $gray-300;
+      &-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
     }
 
     &__informations {
