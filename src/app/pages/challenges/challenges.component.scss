@@ -66,6 +66,9 @@
     margin: 0 auto;
   }
 
+  &__empty {
+    color: $white;
+  }
 
   &__filter-container {
     width: 30%;
