@@ -1,0 +1,47 @@
+.alert {
+    display: flex;
+    justify-content: space-between;
+    width: 285px;
+    background: #253325;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 10000;
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+
+    visibility: hidden;
+    
+    &__text {
+        color: #B9EEBB;
+    }
+
+    &__icon-close {
+        opacity: 0.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &.show {
+        visibility: visible;
+        animation: 4s ease-in 1s 1 reverse both running show;
+    }
+
+    @keyframes show {
+        0%   {opacity: 0; transform: translateY(-10px)}
+        25%  {opacity: 1; }
+        50%  {opacity: 1; }
+        75%  {opacity: 1; }
+        100% {opacity: 0; }
+    }
+}

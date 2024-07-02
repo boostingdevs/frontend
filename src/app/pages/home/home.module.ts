@@ -6,11 +6,10 @@ import { StackComponent } from './components/stack/stack.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroModule } from "../../core/components/hero/hero.module";
-
-
+import { AlertComponent } from '../../core/components/alert/alert.component';
 
 @NgModule({
-    declarations: [HomeComponent, StackComponent, NewsletterComponent],
+    declarations: [HomeComponent, StackComponent, NewsletterComponent, AlertComponent],
     exports: [HomeComponent],
     imports: [
         CommonModule,

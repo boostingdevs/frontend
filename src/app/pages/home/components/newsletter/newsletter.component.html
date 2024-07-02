@@ -4,8 +4,8 @@
             Ao se inscrever na newsletter, você concorda em receber atualizações semanais da Boosting Devs. Você pode se desinscrever a qualquer momento.
         </p>
         <div class="newsletter__input">
-            <input type="text" placeholder="hello@boostingdevs.com">
-            <button> Inscreva-se </button>
+            <input type="text" placeholder="hello@boostingdevs.com" #input>
+            <button (click)="submitNewsletter(input)">Inscreva-se</button>
         </div>
     </div>
 </div>

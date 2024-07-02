@@ -16,9 +16,7 @@ export class HomeComponent {
   public homeParagrafo: string = "Aprenda programação de verdade com projetos reais.";
   public homeH1: string = "Desenvolva seu portfólio com ";
   public homeH1Color: any = "Projetos Reais"
-
-
-
+  
   public navigateToChallenges(): void {
     this.router.navigate(['/challenges']);
   }
