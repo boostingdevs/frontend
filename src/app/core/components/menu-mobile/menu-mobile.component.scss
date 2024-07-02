@@ -63,13 +63,57 @@
 
   &__menu {
     width: 100%;
-
     justify-content: flex-end;
     display: flex;
     margin-top: 30px;
+
     &-item {
       text-align: right;
       margin-bottom: 15px;
+      width: fit-content;
+
+      &-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &.disabled {
+        & > a {
+          pointer-events: none;
+          color: $gray-700;
+        }
+      }
+
+      &.soon {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        & > a {
+          pointer-events: none;
+          color: $gray-700;
+
+        }
+        
+        &::before {
+          position: relative;
+          margin-right: 15px;
+          opacity: 1;
+          transition: .35s ease;
+          background-color: $green;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "Soon";
+          white-space: nowrap;
+          color: $gray-900;
+          padding: 2px 6px;
+          border-radius: 1.5px;
+          font-size: 12px;
+          z-index: 2;
+          height: 20px;
+        }
+      }
 
       & > a {
         text-decoration: none;
