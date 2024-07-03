@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, inject } from '@angular/core';
 import { ChallengesService } from '../../core/services/challenges.service';
 import { Challenge } from '../../core/types/challenge/challenge.model';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProgressBarService } from '../../core/services/progress-bar.service';
 
 
@@ -54,6 +54,11 @@ export class ChallengesComponent implements OnInit {
   private challengesService = inject(ChallengesService)
 
   /**
+   * Activated Route DI
+   */
+  private activatedRoute = inject(ActivatedRoute)
+
+  /**
    * Router Service DI
    */
   private router = inject(Router)
@@ -71,12 +76,12 @@ export class ChallengesComponent implements OnInit {
   readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
 
   ngOnInit(): void {
-    this.challengesService.getChallenges().subscribe({
-      next: (challenges) => {
+    this.activatedRoute.data.subscribe({
+      next: ({ challenges }) => {
         this.challenges = challenges;
         this.immutableChallenges = challenges;
 
-        challenges.map((challenge) => (challenge.areas)).map((areas: string[]) => {
+        challenges.map((challenge: Challenge) => (challenge.areas)).map((areas: string[]) => {
           areas.map(area => {
             if(!this.filterAreas.includes(area)) {
               this.filterAreas.push(area)
@@ -84,7 +89,7 @@ export class ChallengesComponent implements OnInit {
           })
         });
 
-        challenges.map((challenge) => (challenge.categories)).map((categories: string[]) => {
+        challenges.map((challenge: Challenge) => (challenge.categories)).map((categories: string[]) => {
           categories.map(category => {
             if(!this.filterCategories.includes(category)) {
               this.filterCategories.push(category)

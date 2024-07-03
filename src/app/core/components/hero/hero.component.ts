@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProgressBarService } from '../../services/progress-bar.service';
 
 @Component({
   selector: 'app-hero',
@@ -11,6 +12,8 @@ export class HeroComponent {
   @Input() textP: string = "";
   @Input() textH1: string = "";
   @Input() textH1Color: string = "";
+
+  private progressBarService = inject(ProgressBarService);
 
   private router = inject(Router);
 
@@ -24,6 +27,9 @@ export class HeroComponent {
   readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
 
   public navigateToChallenges(): void {
-    this.router.navigate(['/challenges']);
+    this.progressBarService.progressBarState.next(true);
+    this.router.navigate(['/challenges']).finally(() => {
+      this.progressBarService.progressBarState.next(false);
+    })
   }
 }

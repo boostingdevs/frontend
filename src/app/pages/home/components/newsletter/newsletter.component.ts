@@ -20,7 +20,7 @@ export class NewsletterComponent {
   /**
    * Email
    */
-  email: FormControl = new FormControl('', Validators.email);
+  email: FormControl = new FormControl('', [Validators.email, Validators.required]);
 
   public inputLoading = false;
 
@@ -33,7 +33,7 @@ export class NewsletterComponent {
 
     this.inputLoading = true;
 
-    if(this.email.valid) {
+    if(this.email.valid && this.email.touched) {
       this.newsletterService.insertLead(this.email.value)
       .pipe(finalize(() => {
         this.inputLoading = false;
@@ -46,6 +46,7 @@ export class NewsletterComponent {
       })
     } else {
       input.classList.add('error');
+      this.inputLoading = false;
     }
   }
 
