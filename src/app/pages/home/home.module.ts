@@ -7,6 +7,7 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
 import { HttpClientModule } from '@angular/common/http';
 import { HeroModule } from "../../core/components/hero/hero.module";
 import { AlertComponent } from '../../core/components/alert/alert.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [HomeComponent, StackComponent, NewsletterComponent, AlertComponent],
@@ -15,7 +16,9 @@ import { AlertComponent } from '../../core/components/alert/alert.component';
         CommonModule,
         HomeRoutingModule,
         HttpClientModule,
-        HeroModule
+        HeroModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class HomeModule { }

@@ -3,9 +3,15 @@
         <p class="newsletter__text">
             Ao se inscrever na newsletter, você concorda em receber atualizações semanais da Boosting Devs. Você pode se desinscrever a qualquer momento.
         </p>
-        <div class="newsletter__input">
-            <input type="text" placeholder="hello@boostingdevs.com" #input>
-            <button (click)="submitNewsletter(input)">Inscreva-se</button>
+        <div class="newsletter__input" #input [ngClass]="{'disabled': !this.email.valid}">
+            <input type="text" placeholder="hello@boostingdevs.com" [formControl]="email">
+            <button class="newsletter__input-button" (click)="submitNewsletter(input)">
+                @if (!inputLoading) {
+                    <p>Inscreva-se</p>
+                } @else {
+                    <div class="loader"></div>
+                }
+            </button>
         </div>
     </div>
 </div>

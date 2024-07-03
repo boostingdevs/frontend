@@ -8,8 +8,8 @@ export class AlertService {
     const alert = document.querySelector("[alert-type='success']") as HTMLDivElement
     alert.classList.toggle('show');
 
-    setInterval(() => {
+    setTimeout(() => {
       alert.classList.toggle('show');
-    }, 5000);
+    }, 4000);
   }
 }
