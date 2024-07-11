@@ -1,0 +1,25 @@
+<div class="contribute">
+    <app-hero [textP]="'Apoie da maneira que você puder!'" [textH1]="'Ajude a manter Boosting Devs no ar.'" [contributeButton]="true"/>
+
+    <form class="contribute__form" [formGroup]="contributeForm">
+        <h6 class="contribute__form-title">Ajude a <strong>Boosting Devs</strong></h6>
+        <p class="contribute__form-subtitle">Se você quer ajudar de outra maneira, me diga como:</p>
+
+        <label class="contribute__label" for="name">Nome: </label>
+        <input class="contribute__input" id="name" type="text" formControlName="name">
+
+        <label class="contribute__label" for="email">E-mail: </label>
+        <input class="contribute__input" id="email" type="text" formControlName="email">
+
+        <label class="contribute__label" for="message">Mensagem: </label>
+        <textarea class="contribute__input textarea" id="message" type="text" formControlName="message"></textarea>
+
+        <button (click)="sendMessage()" class="button contribute__form-button">
+            @if (!loading) {
+                Enviar
+            } @else { 
+                <span class="loader"></span>
+            }
+        </button>
+    </form>
+</div>
