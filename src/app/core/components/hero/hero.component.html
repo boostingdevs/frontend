@@ -3,6 +3,7 @@
       <p class="main-section__subtitle" >{{ textP }}</p>
       <h2 class="main-section__title">{{ textH1 }}<strong style="color: #60F366;">{{ textH1Color }}</strong></h2>
       <div class="main-section__button">
+          <button class="button"  *ngIf="contributeButton" (click)="navigateToApoiase()">Apoia.Se</button>
           <button class="button"  *ngIf="startProjectButton" (click)="navigateToChallenges()">Começar um projeto</button>
           <button class="button --dark">
             <a [href]="DISCORD_INVITATION">

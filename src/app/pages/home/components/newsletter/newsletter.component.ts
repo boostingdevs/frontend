@@ -1,5 +1,5 @@
 import { Component, ElementRef, inject } from '@angular/core';
-import { AlertService } from '../../../../core/components/alert/service/alert.service';
+import { AlertService } from '../../../../core/components/alert/services/alert.service';
 import { NewsletterService } from '../../../../core/services/newsletter.service';
 import { finalize } from 'rxjs';
 import { EmailValidator, FormControl, Validators } from '@angular/forms';

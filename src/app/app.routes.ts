@@ -14,6 +14,10 @@ export const routes: Routes = [
       loadChildren: () => import('./pages/challenge/challenge.module').then(m => m.ChallengeModule)
     },
     {
+      path: 'contribute',
+      loadChildren: () => import('./pages/contribute/contribute.module').then(m => m.ContributeModule)
+    },
+    {
       path: '**',
       loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
     }

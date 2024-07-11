@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {  
     this.progressBarService.progressBarState.subscribe((value) => {
-      console.log(value)
       this.progressBarState = value
     });
   }

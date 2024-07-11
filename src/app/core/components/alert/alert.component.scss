@@ -1,6 +1,6 @@
 .alert {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 285px;
     background: #253325;
     padding: 15px;
@@ -9,10 +9,10 @@
     position: fixed;
     left: 25px;
     bottom: 25px;
-
     visibility: hidden;
     
     &__text {
+        margin-left: 10px;
         color: #B9EEBB;
     }
 
@@ -34,7 +34,7 @@
 
     &.show {
         visibility: visible;
-        animation: 2s ease-in .25s 1 reverse both running show;
+        animation: 2s ease-in .35s 1 reverse both running show;
     }
 
     @keyframes show {

@@ -22,13 +22,23 @@ export class HeroComponent {
    */
   @Input() startProjectButton = false;
 
-  private httpClient = inject(HttpClient);
+  /**
+   * Contribute button
+   */
+  @Input() contributeButton = false;
 
   readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
 
   public navigateToChallenges(): void {
     this.progressBarService.progressBarState.next(true);
     this.router.navigate(['/challenges']).finally(() => {
+      this.progressBarService.progressBarState.next(false);
+    })
+  }
+
+  public navigateToApoiase(): void {
+    this.progressBarService.progressBarState.next(true);
+    this.router.navigate(['/contribute']).finally(() => {
       this.progressBarService.progressBarState.next(false);
     })
   }
