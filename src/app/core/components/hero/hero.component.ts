@@ -27,7 +27,7 @@ export class HeroComponent {
    */
   @Input() contributeButton = false;
 
-  readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
+  readonly DISCORD_INVITATION = 'https://discord.gg/nuhkGQRqSb';
 
   public navigateToChallenges(): void {
     this.progressBarService.progressBarState.next(true);

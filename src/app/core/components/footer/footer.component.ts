@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
+  readonly DISCORD_INVITATION = 'https://discord.gg/nuhkGQRqSb';
 }

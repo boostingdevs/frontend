@@ -73,7 +73,7 @@ export class ChallengesComponent implements OnInit {
   private filterCategoriesCache: string[] = [];
   private filterStatusList: boolean[] = [];
 
-  readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
+  readonly DISCORD_INVITATION = 'https://discord.gg/nuhkGQRqSb';
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe({

@@ -14,7 +14,7 @@ export class HomeComponent {
 
   private progressBarService = inject(ProgressBarService);
 
-  readonly DISCORD_INVITATION = 'https://discord.gg/2Zj4sVgu';
+  readonly DISCORD_INVITATION = 'https://discord.gg/nuhkGQRqSb';
 
   public homeParagrafo: string = "Aprenda programação de verdade com projetos reais.";
   public homeH1: string = "Desenvolva seu portfólio com ";
