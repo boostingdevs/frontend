@@ -1,0 +1,203 @@
+{
+    "title": "Frontend",
+    "steps": [
+        {
+            "title": "Fundamentos",
+            "node": [
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Internet"
+                    },
+                    "position": {
+                        "x": 24.5,
+                        "y": 24.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "HTML"
+                    },
+                    "position": {
+                        "x": 294.5,
+                        "y": 24.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "CSS"
+                    },
+                    "position": {
+                        "x": 294.5,
+                        "y": 64.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "JavaScript"
+                    },
+                    "position": {
+                        "x": 294.5,
+                        "y": 104.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Git"
+                    },
+                    "position": {
+                        "x": 444.5,
+                        "y": 104.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "GitHub"
+                    },
+                    "position": {
+                        "x": 546.5,
+                        "y": 104.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "npm"
+                    },
+                    "position": {
+                        "x": 690.5,
+                        "y": 104.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Vitest"
+                    },
+                    "position": {
+                        "x": 402.5,
+                        "y": 188.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Tailwind"
+                    },
+                    "position": {
+                        "x": 546.5,
+                        "y": 188.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "React"
+                    },
+                    "position": {
+                        "x": 690.5,
+                        "y": 188.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Vue"
+                    },
+                    "position": {
+                        "x": 690.5,
+                        "y": 228.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Jest"
+                    },
+                    "position": {
+                        "x": 402.5,
+                        "y": 228.5
+                    }
+                },
+                {
+                    "width": 89,
+                    "height": 29,
+                    "data": {
+                        "label": "Angular"
+                    },
+                    "position": {
+                        "x": 690.5,
+                        "y": 268.5
+                    }
+                }
+            ],
+            "edge": [
+                {
+                    "x1": 114,
+                    "y1": 40,
+                    "x2": 295,
+                    "y2": 40,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 384,
+                    "y1": 120,
+                    "x2": 444,
+                    "y2": 120,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 636,
+                    "y1": 120,
+                    "x2": 690,
+                    "y2": 120,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 636,
+                    "y1": 204,
+                    "x2": 690,
+                    "y2": 204,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 492,
+                    "y1": 204,
+                    "x2": 546,
+                    "y2": 204,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 735,
+                    "y1": 134,
+                    "x2": 735,
+                    "y2": 188,
+                    "stroke": "white",
+                    "stroke-width": 2
+                }
+            ]
+        }
+    ]
+}
