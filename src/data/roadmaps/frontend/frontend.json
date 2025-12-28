@@ -1,199 +1,404 @@
 {
     "title": "Frontend",
+    "description": "A trilha definitiva para se tornar um desenvolvedor Frontend completo.",
     "steps": [
         {
             "title": "Fundamentos",
+            "description": "Conheça os fundamentos e avanços do mundo do desenvolvimento frontend.",
+            "width": 900,
+            "height": 683,
             "node": [
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Internet"
                     },
                     "position": {
-                        "x": 24.5,
-                        "y": 24.5
+                        "x": 0.5,
+                        "y": 0.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "HTML"
                     },
                     "position": {
-                        "x": 294.5,
-                        "y": 24.5
+                        "x": 350.5,
+                        "y": 0.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "CSS"
                     },
                     "position": {
-                        "x": 294.5,
-                        "y": 64.5
+                        "x": 351.5,
+                        "y": 50.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "JavaScript"
                     },
                     "position": {
-                        "x": 294.5,
-                        "y": 104.5
+                        "x": 351.5,
+                        "y": 100.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Git"
                     },
                     "position": {
-                        "x": 444.5,
-                        "y": 104.5
+                        "x": 696.5,
+                        "y": 100.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "GitHub"
                     },
                     "position": {
-                        "x": 546.5,
-                        "y": 104.5
+                        "x": 696.5,
+                        "y": 151.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "npm"
                     },
                     "position": {
-                        "x": 690.5,
-                        "y": 104.5
+                        "x": 696.5,
+                        "y": 245.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Vitest"
                     },
                     "position": {
-                        "x": 402.5,
-                        "y": 188.5
+                        "x": 351.5,
+                        "y": 245.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Tailwind"
                     },
                     "position": {
-                        "x": 546.5,
-                        "y": 188.5
+                        "x": 350.5,
+                        "y": 295.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "React"
                     },
                     "position": {
-                        "x": 690.5,
-                        "y": 188.5
+                        "x": 350.5,
+                        "y": 345.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Vue"
                     },
                     "position": {
-                        "x": 690.5,
-                        "y": 228.5
+                        "x": 350.5,
+                        "y": 438.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Jest"
                     },
                     "position": {
-                        "x": 402.5,
-                        "y": 228.5
+                        "x": 350.5,
+                        "y": 532.5
                     }
                 },
                 {
-                    "width": 89,
-                    "height": 29,
+                    "width": 139,
+                    "height": 39,
                     "data": {
                         "label": "Angular"
                     },
                     "position": {
-                        "x": 690.5,
-                        "y": 268.5
+                        "x": 350.5,
+                        "y": 579.5
                     }
                 }
             ],
             "edge": [
                 {
-                    "x1": 114,
-                    "y1": 40,
-                    "x2": 295,
-                    "y2": 40,
-                    "stroke": "white",
-                    "stroke-width": 2
-                },
-                {
-                    "x1": 384,
+                    "x1": 491,
                     "y1": 120,
-                    "x2": 444,
+                    "x2": 696,
                     "y2": 120,
                     "stroke": "white",
                     "stroke-width": 2
                 },
                 {
-                    "x1": 636,
+                    "x1": 140,
+                    "y1": 20,
+                    "x2": 350,
+                    "y2": 20,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 491,
+                    "y1": 265,
+                    "x2": 696,
+                    "y2": 265,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 766,
+                    "y1": 191,
+                    "x2": 766,
+                    "y2": 245,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 421,
+                    "y1": 384,
+                    "x2": 421,
+                    "y2": 438,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 421,
+                    "y1": 478,
+                    "x2": 421,
+                    "y2": 532,
+                    "stroke": "white",
+                    "stroke-width": 2
+                }
+            ]
+        },
+        {
+            "title": "Fundamentos",
+            "description": "Conheça os fundamentos e avanços do mundo do desenvolvimento frontend.",
+            "width": 900,
+            "height": 683,
+            "node": [
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Internet"
+                    },
+                    "position": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "HTML"
+                    },
+                    "position": {
+                        "x": 350.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "CSS"
+                    },
+                    "position": {
+                        "x": 351.5,
+                        "y": 50.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "JavaScript"
+                    },
+                    "position": {
+                        "x": 351.5,
+                        "y": 100.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Git"
+                    },
+                    "position": {
+                        "x": 696.5,
+                        "y": 100.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "GitHub"
+                    },
+                    "position": {
+                        "x": 696.5,
+                        "y": 151.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "npm"
+                    },
+                    "position": {
+                        "x": 696.5,
+                        "y": 245.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Vitest"
+                    },
+                    "position": {
+                        "x": 351.5,
+                        "y": 245.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Tailwind"
+                    },
+                    "position": {
+                        "x": 350.5,
+                        "y": 295.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "React"
+                    },
+                    "position": {
+                        "x": 350.5,
+                        "y": 345.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Vue"
+                    },
+                    "position": {
+                        "x": 350.5,
+                        "y": 438.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Jest"
+                    },
+                    "position": {
+                        "x": 350.5,
+                        "y": 532.5
+                    }
+                },
+                {
+                    "width": 139,
+                    "height": 39,
+                    "data": {
+                        "label": "Angular"
+                    },
+                    "position": {
+                        "x": 350.5,
+                        "y": 579.5
+                    }
+                }
+            ],
+            "edge": [
+                {
+                    "x1": 491,
                     "y1": 120,
-                    "x2": 690,
+                    "x2": 696,
                     "y2": 120,
                     "stroke": "white",
                     "stroke-width": 2
                 },
                 {
-                    "x1": 636,
-                    "y1": 204,
-                    "x2": 690,
-                    "y2": 204,
+                    "x1": 140,
+                    "y1": 20,
+                    "x2": 350,
+                    "y2": 20,
                     "stroke": "white",
                     "stroke-width": 2
                 },
                 {
-                    "x1": 492,
-                    "y1": 204,
-                    "x2": 546,
-                    "y2": 204,
+                    "x1": 491,
+                    "y1": 265,
+                    "x2": 696,
+                    "y2": 265,
                     "stroke": "white",
                     "stroke-width": 2
                 },
                 {
-                    "x1": 735,
-                    "y1": 134,
-                    "x2": 735,
-                    "y2": 188,
+                    "x1": 766,
+                    "y1": 191,
+                    "x2": 766,
+                    "y2": 245,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 421,
+                    "y1": 384,
+                    "x2": 421,
+                    "y2": 438,
+                    "stroke": "white",
+                    "stroke-width": 2
+                },
+                {
+                    "x1": 421,
+                    "y1": 478,
+                    "x2": 421,
+                    "y2": 532,
                     "stroke": "white",
                     "stroke-width": 2
                 }

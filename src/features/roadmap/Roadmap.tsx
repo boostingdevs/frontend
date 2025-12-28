@@ -1,5 +1,7 @@
 import React from "react";
 import frontendData from "../../data/roadmaps/frontend/frontend.json";
+import RoadmapTitle from "./components/RoadmapTitle";
+import StepTitle from "./components/StepTitle";
 
 interface NodeData {
     width: number;
@@ -54,6 +56,7 @@ const Box = ({ node }: { node: NodeData }) => {
                     fill="black"
                     fontSize="14"
                     fontWeight="500"
+                    fontFamily="var(--font-dm-mono)"
                 >
                     {data.label}
                 </tspan>
@@ -64,32 +67,36 @@ const Box = ({ node }: { node: NodeData }) => {
 
 export default function Roadmap() {
     return (
-        <div className="flex items-center justify-center h-full overflow-auto mx-auto">
-            <svg
-                width="1000"
-                height="322"
-                viewBox="0 0 800 322"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                {/* Render Edges first so they are behind nodes */}
-                {frontendData.steps[0].edge.map((edge: EdgeData, index: number) => (
-                    <line
-                        key={`edge-${index}`}
-                        x1={edge.x1}
-                        y1={edge.y1}
-                        x2={edge.x2}
-                        y2={edge.y2}
-                        stroke={edge.stroke}
-                        strokeWidth={edge["stroke-width"]}
-                    />
-                ))}
+        <div className="flex items-center justify-center h-full overflow-auto mx-auto flex-col bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px] border border-neutral-900">
+            <RoadmapTitle title={frontendData.title} subtitle={frontendData.description} />
 
-                {/* Render Nodes */}
-                {frontendData.steps[0].node.map((node: NodeData, index: number) => (
-                    <Box key={`node-${index}`} node={node} />
-                ))}
-            </svg>
+            {frontendData.steps.map((step, index) => (
+                <div key={index} className="flex items-center justify-center mx-auto bg-neutral-950 flex-col p-12 border border-neutral-900 bg-[radial-gradient(#80808012_1px,transparent_1px)] [background-size:24px_24px] mb-8">
+                    <StepTitle title={step.title} description={step.description} />
+                    <svg
+                        width={step.width}
+                        height={step.height}
+                        viewBox={`0 0 ${step.width} ${step.height}`}
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        {step.edge.map((edge: EdgeData, edgeIndex: number) => (
+                            <line
+                                key={`edge-${index}-${edgeIndex}`}
+                                x1={edge.x1}
+                                y1={edge.y1}
+                                x2={edge.x2}
+                                y2={edge.y2}
+                                stroke={edge.stroke}
+                                strokeWidth={edge["stroke-width"]}
+                            />
+                        ))}
+                        {step.node.map((node: NodeData, nodeIndex: number) => (
+                            <Box key={`node-${index}-${nodeIndex}`} node={node} />
+                        ))}
+                    </svg>
+                </div>
+            ))}
         </div>
     );
 }
